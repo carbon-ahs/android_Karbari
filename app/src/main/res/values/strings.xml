@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Karbari</string>
+    <string name="simple_interest_tv_text">Simple Interest</string>
+    <string name="compound_interest_tv_text">Compound Interest</string>
+    <string name="ledger_tv_text">Ledger</string>
+    <string name="about_tv_text">About Us</string>
+</resources>
