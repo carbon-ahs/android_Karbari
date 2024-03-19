@@ -29,6 +29,7 @@ public abstract class ContactRoomDatabase extends RoomDatabase {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                             ContactRoomDatabase.class, DB_NAME)
+                            .addCallback(sRoomDatabaseCallback)
                             .build();
                 }
             }
@@ -45,6 +46,28 @@ public abstract class ContactRoomDatabase extends RoomDatabase {
                     databaseExecutor.execute(() -> {
                         ContactDao contactDao = INSTANCE.contactDao();
                         contactDao.deleteAll();
+
+//                        contactDao.insert(new Contact("", ""));
+                        contactDao.insert(new Contact("a", "a"));
+                        contactDao.insert(new Contact("b", "b"));
+                        contactDao.insert(new Contact("c", "c"));
+                        contactDao.insert(new Contact("d", "d"));
+                        contactDao.insert(new Contact("e", "e"));
+                        contactDao.insert(new Contact("f", "f"));
+                        contactDao.insert(new Contact("g", "g"));
+                        contactDao.insert(new Contact("h", "h"));
+                        contactDao.insert(new Contact("i", "i"));
+                        contactDao.insert(new Contact("j", "j"));
+                        contactDao.insert(new Contact("a", "a"));
+                        contactDao.insert(new Contact("b", "b"));
+                        contactDao.insert(new Contact("c", "c"));
+                        contactDao.insert(new Contact("d", "d"));
+                        contactDao.insert(new Contact("e", "e"));
+                        contactDao.insert(new Contact("f", "f"));
+                        contactDao.insert(new Contact("g", "g"));
+                        contactDao.insert(new Contact("h", "h"));
+                        contactDao.insert(new Contact("i", "i"));
+                        contactDao.insert(new Contact("j", "j"));
 
                     });
                 }

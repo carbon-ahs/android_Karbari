@@ -31,6 +31,12 @@ public class Contact {
         this.occupation = occupation;
     }
 
+    public Contact(int id, String name, String occupation) {
+        this.id = id;
+        this.name = name;
+        this.occupation = occupation;
+    }
+
     public int getId() {
         return id;
     }
